@@ -68,3 +68,4 @@ This should be run at shutdown and when the Spot Termination notice is detected.
 Special thanks to the original authors whose commits were clobbered in the OSS port.
 * https://github.com/jstrunk
 * https://github.com/himadrisingh001
+* https://github.com/QuinRogers
