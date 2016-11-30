@@ -55,8 +55,3 @@ ebs_requirements:
       - boto
       - pyyaml
       - retrying
-
-/etc/spottermination.d/50ebs:
-  file.managed:
-    - source: salt://ebs/etc/spottermination.d/50ebs
-    - mode: 0755
