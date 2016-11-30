@@ -12,10 +12,6 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-include:
-  - python-pip
-  - spottermination
-
 /usr/bin/ebs_start.py:
   file.managed:
     - mode: 0755
@@ -39,6 +35,16 @@ include:
     - source: salt://ebs/etc/init/ebs-shutdown.conf
     - require:
       - pip: ebs_requirements
+
+python3-pip:
+  pkg:
+    - installed
+  pip.installed:
+    - names:
+      - pip
+    - bin_env: /usr/bin/pip3
+    - require:
+      - pkg: python3-pip
 
 ebs_requirements:
   pip.installed:
